@@ -43,6 +43,7 @@ ftfy==6.3.1
 regex==2024.11.6
 
 # Data loading and storage
+wcwidth==0.6.0
 webdataset==0.2.111
 zarr==2.18.3
 tensorstore==0.1.45
