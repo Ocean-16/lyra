@@ -22,6 +22,7 @@ pip install torch==2.7.1 torchvision==0.22.1 --extra-index-url https://download.
 # 4. Set build environment variables
 SITE=$CONDA_PREFIX/lib/python3.10/site-packages
 export CPATH="$CUDA_HOME/include:$SITE/nvidia/cudnn/include:$SITE/nvidia/nccl/include:$CPATH"
+# If transformer_engine fails to compile (reported on Python 3.11 / Ubuntu 24.04), also run:
 export CPATH="$SITE/nvidia/cuda_nvrtc/include:$SITE/nvidia/nvtx/include:$CPATH"
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$SITE/torch/lib:$SITE/nvidia/cuda_runtime/lib:$SITE/nvidia/cudnn/lib:$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
 export CC="$CONDA_PREFIX/bin/x86_64-conda-linux-gnu-gcc"
